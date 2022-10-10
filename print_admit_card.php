@@ -46,6 +46,7 @@ if ($_POST['exam_rol_no'] >= 1000) {
             <div class="text-center my-5">
                 <h3>Talent Hunt Exam 2022</h3>
                 <h4>Kendra Mahatha Ladania</h4>
+                <h5 class="mt-3"><u>Admit Card</u></h5>
             </div>
             <div class="ms-5 mb-5">
                 <p><b>Student Name:</b> <?php echo strtoupper($row['student_name']) ?></p>
