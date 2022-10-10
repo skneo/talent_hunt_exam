@@ -36,7 +36,7 @@ function validateInput($data)
         $row = $ret->fetchArray(SQLITE3_ASSOC);
         if ($row) {
             echo "<div class='alert alert-danger' role='alert'>
-            Errro! Application with School name $school and Scholl Roll number $sch_rol_no already submitted.
+            Errro! Application with School name $school and School Roll number $sch_rol_no already submitted.
             </div>
             <a href='apply.php' class='btn btn-primary my-3 mx-3'>New Application</a>";
             $db->close();
