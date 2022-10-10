@@ -48,7 +48,7 @@ if ($_POST['exam_rol_no'] >= 1000) {
                 <h4>Kendra Mahatha Ladania</h4>
             </div>
             <div class="ms-5 mb-5">
-                <p><b>Student Name:</b> <?php echo $row['student_name'] ?></p>
+                <p><b>Student Name:</b> <?php echo strtoupper($row['student_name']) ?></p>
                 <p><b>Exam Roll Number:</b> <?php echo $exam_rol_no ?></p>
                 <p><b>Exam Center:</b> Rajkiya Madhya Vidhyalaya Mahatha</p>
                 <p><b>Exam Date:</b> 26 October, 2022</p>
