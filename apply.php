@@ -18,7 +18,7 @@ session_start();
     ?>
     <div class='container my-3'>
         <h4>Apply for Talent Hunt Exam 2022</h4>
-        <form method='POST' action='view_admit_card.php'>
+        <form method='GET' action='verify.php'>
             <div class='mb-3'>
                 <label for='student_name' class='form-label float-start'>Student Name</label>
                 <input type='text' oninput="this.value = this.value.toUpperCase()" class='form-control' id='student_name' name='student_name' required>
