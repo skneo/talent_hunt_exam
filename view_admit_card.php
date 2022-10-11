@@ -25,9 +25,9 @@ function validateInput($data)
 <body>
     <?php
     include 'header.php';
-    if (isset($_POST['student_name'])) {
-        $school = validateInput($_POST['school']);
-        $sch_rol_no = validateInput($_POST['sch_rol_no']);
+    if (isset($_GET['student_name'])) {
+        $school = validateInput($_GET['school']);
+        $sch_rol_no = validateInput($_GET['sch_rol_no']);
         $sql = <<<EOF
         SELECT * from applications WHERE school='$school' and school_rol_no='$sch_rol_no';
         EOF;
@@ -42,12 +42,12 @@ function validateInput($data)
             $db->close();
             exit;
         } else {
-            $student_name = validateInput($_POST['student_name']);
-            $father_name = validateInput($_POST['father_name']);
-            $address = validateInput($_POST['address']);
+            $student_name = validateInput($_GET['student_name']);
+            $father_name = validateInput($_GET['father_name']);
+            $address = validateInput($_GET['address']);
             $student_class = '10';
-            $phone = validateInput($_POST['phone']);
-            $email = validateInput($_POST['email']);
+            $phone = validateInput($_GET['phone']);
+            $email = validateInput($_GET['email']);
             $center = "Rajkiya Madhya Vidhyalaya Mahatha";
             date_default_timezone_set('Asia/Kolkata');
             $curr_date = date('Y-m-d H:i:s');
@@ -77,7 +77,7 @@ function validateInput($data)
     ?>
     <div class='container my-3'>
         <?php
-        if (isset($_POST['student_name'])) {
+        if (isset($_GET['student_name'])) {
             echo "<p>Your exam roll number is $exam_rol_no</p>";
         }
         ?>
@@ -86,7 +86,7 @@ function validateInput($data)
             <div class='mb-3'>
                 <label for='exam_rol_no' class='form-label float-start'>Exam Roll Number</label>
                 <?php
-                if (isset($_POST['student_name'])) {
+                if (isset($_GET['student_name'])) {
                     echo " <input type='number' class='form-control' id='exam_rol_no' name='exam_rol_no' value='$exam_rol_no' required>";
                 } else {
                     echo " <input type='number' class='form-control' id='exam_rol_no' name='exam_rol_no' required>";
