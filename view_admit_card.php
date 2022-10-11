@@ -92,7 +92,7 @@ function validateInput($data)
                     echo " <input type='number' class='form-control' id='exam_rol_no' name='exam_rol_no' required>";
                 }
                 ?>
-                <small class='form-text text-muted'>4 digit exam roll number</small>
+                <small class='form-text text-muted'>4 digit exam roll number <a href="search.php">Search Roll No</a></small>
             </div>
             <button type='submit' class='btn btn-primary'>Print Admit Card</button>
         </form>

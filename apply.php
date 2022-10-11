@@ -21,28 +21,28 @@ session_start();
         <form method='POST' action='view_admit_card.php'>
             <div class='mb-3'>
                 <label for='student_name' class='form-label float-start'>Student Name</label>
-                <input type='text' class='form-control' id='student_name' name='student_name' required>
+                <input type='text' oninput="this.value = this.value.toUpperCase()" class='form-control' id='student_name' name='student_name' required>
                 <small class='form-text text-muted'>As per 10th record</small>
             </div>
             <div class='mb-3'>
                 <label for='father_name' class='form-label float-start'>Father Name</label>
-                <input type='text' class='form-control' id='father_name' name='father_name' required>
+                <input type='text' oninput="this.value = this.value.toUpperCase()" class='form-control' id='father_name' name='father_name' required>
             </div>
             <div class='mb-3'>
                 <label for='address' class='form-label float-start'>Address</label>
-                <input type='text' class='form-control' id='address' name='address' required>
+                <input type='text' oninput="this.value = this.value.toUpperCase()" class='form-control' id='address' name='address' required>
             </div>
             <div class='mb-3'>
                 <label for='school' class='form-label float-start'>School Name</label>
-                <input type='text' class='form-control' id='school' name='school' required>
+                <input type='text' oninput="this.value = this.value.toUpperCase()" class='form-control' id='school' name='school' required>
             </div>
             <div class='mb-3'>
                 <label for='student_class' class='form-label float-start'>Class</label>
-                <input type='text' disabled class='form-control' id='student_class' name='student_class' value='10' required>
+                <input type='text' oninput="this.value = this.value.toUpperCase()" disabled class='form-control' id='student_class' name='student_class' value='10' required>
             </div>
             <div class='mb-3'>
                 <label for='sch_rol_no' class='form-label float-start'>School Roll No</label>
-                <input type='text' class='form-control' id='sch_rol_no' name='sch_rol_no' required>
+                <input type='text' oninput="this.value = this.value.toUpperCase()" class='form-control' id='sch_rol_no' name='sch_rol_no' required>
             </div>
             <div class='mb-3'>
                 <label for='phone' class='form-label float-start'>Parent's Phone Number</label>
@@ -50,9 +50,9 @@ session_start();
             </div>
             <div class='mb-3'>
                 <label for='email' class='form-label float-start'>Email</label>
-                <input type='text' class='form-control' id='email' name='email' placeholder='Optional'>
+                <input type='text' oninput="this.value = this.value.toUpperCase()" class='form-control' id='email' name='email' placeholder='Optional'>
             </div>
-            <button type='submit' class='btn btn-primary'>Submit</button>
+            <button type='submit' class='btn btn-primary' onclick="return confirm('Sure to submit? Please check your data before submitting.')">Submit</button>
         </form>
     </div>
     <!-- Option 1: Bootstrap Bundle with Popper -->

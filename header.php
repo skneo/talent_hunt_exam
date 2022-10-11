@@ -24,6 +24,7 @@
                     <ul class='dropdown-menu' aria-labelledby='navbarDropdown'>
                         <li><a class='dropdown-item ' href='apply.php'>New Application</a></li>
                         <li><a class='dropdown-item ' href='view_admit_card.php'>Download Admit Card</a></li>
+                        <li><a class='dropdown-item ' href='search.php'>Search Roll no</a></li>
                     </ul>
                 </li>
                 <li class='nav-item'>
