@@ -52,7 +52,7 @@ session_start();
                 <label for='email' class='form-label float-start'>Email</label>
                 <input type='text' oninput="this.value = this.value.toUpperCase()" class='form-control' id='email' name='email' placeholder='Optional'>
             </div>
-            <button type='submit' class='btn btn-primary' onclick="return confirm('Sure to submit? Please check your data before submitting.')">Submit</button>
+            <button type='submit' class='btn btn-primary' onclick="return confirm('Please check your data before submitting. Press \'Cancel\' to recheck data or press \'Ok\' to submit form.')">Submit</button>
         </form>
     </div>
     <!-- Option 1: Bootstrap Bundle with Popper -->
