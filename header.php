@@ -34,11 +34,16 @@
                     <a id='contact' class='nav-link active ' aria-current='page' href='contact.php'>Contact Us</a>
                 </li>
             </ul>
+
             <?php
             if (!isset($_SESSION['loggedin'])) {
                 echo "<a href='login.php' class='btn btn-primary' >Login</a>";
             } else {
-                echo "<div class='btn-group'>
+                echo "<form class='d-flex' method='get' action='roll_no_detail.php'>
+                    <input name='exam_rol_no' class='form-control me-2' type='search' placeholder='Roll No' aria-label='Search'>
+                    <button class='btn btn-success me-2' type='submit'>Detail</button>
+                    </form>
+                        <div class='btn-group'>
                         <button id='userMenu' type='button' class='btn btn-primary dropdown-toggle ' data-bs-toggle='dropdown' aria-expanded='false' value=''>
                         Menu
                         </button>

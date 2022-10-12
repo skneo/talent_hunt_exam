@@ -38,17 +38,17 @@ function validateInput($data)
     }
     ?>
     <div class='container my-3'>
-        <h4 class="mb-3">Verify your data</h4>
+        <h3 class="mb-3">Verify your data</h3>
         <p><b>NAME:</b> <?php echo $student_name ?></p>
         <p><b>FATHER NAME:</b> <?php echo $father_name ?></p>
-        <p><b>ADDRESS: </b> <?php echo $address ?>
+        <p><b>ADDRESS: </b> <?php echo $address ?></p>
         <p><b>SCHOOL: </b> <?php echo $school ?></p>
         <p><b>CLASS: </b> 10</p>
         <p><b>SCHOOL ROLL NO:</b> <?php echo $sch_rol_no ?></p>
         <p><b>PHONE:</b> <?php echo $phone ?></p>
         <p><b>EMAIL:</b> <?php echo $email ?></p>
         <button onclick="history.back()" class="btn btn-primary me-5">Go Back and Edit</button>
-        <a href="view_admit_card.php?<?php echo $form_data ?></p>" class="ms-5 btn btn-success" onclick="return confirm('Sure to final submit?')">Final Submit</a>
+        <a href="view_admit_card.php?<?php echo $form_data ?>" class="ms-5 btn btn-success" onclick="return confirm('Sure to final submit?')">Final Submit</a>
     </div>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p' crossorigin='anonymous'></script>
