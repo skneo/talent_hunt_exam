@@ -57,7 +57,7 @@ if ($_POST['exam_rol_no'] >= 1000) {
             </div>
         </div>
         <center class="mt-3">
-            <button onclick="window.print()">Print</button>
+            <!--    <button onclick="window.print()">Print</button> -->
         </center>
     </div>
     <script> 
