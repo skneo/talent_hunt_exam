@@ -10,6 +10,6 @@ Options -Indexes
 </Files>
 
 # comment below 3 lines to access phpliteadmin
-<Files "phpliteadmin.php">
-    Require all denied
-</Files>
+# <Files "phpliteadmin.php">
+#     Require all denied
+# </Files>

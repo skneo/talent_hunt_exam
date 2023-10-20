@@ -1,3 +1,6 @@
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 <nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
     <div class='container-fluid'>
         <a class='navbar-brand  ' href='index.php'>TalentHunt</a>
@@ -39,9 +42,11 @@
             if (!isset($_SESSION['loggedin'])) {
                 echo "<a href='login.php' class='btn btn-primary' >Login</a>";
             } else {
-                echo "<form class='d-flex' method='get' action='roll_no_detail.php'>
-                    <input name='exam_rol_no' class='form-control me-2' type='search' placeholder='Roll No' aria-label='Search'>
-                    <button class='btn btn-success me-2' type='submit'>Detail</button>
+                echo "<form class='d-flex me-2 mb-2 mb-md-0' role='search' action='roll_no_detail.php'>
+                        <div class='input-group'>
+                            <input name='exam_rol_no' class='form-control' type='search' aria-label='Search' placeholder='Roll No' required>
+                            <button class='btn btn-primary' type='submit'><i class='bi bi-search'></i></button>
+                        </div>
                     </form>
                         <div class='btn-group'>
                         <button id='userMenu' type='button' class='btn btn-primary dropdown-toggle ' data-bs-toggle='dropdown' aria-expanded='false' value=''>
@@ -59,7 +64,7 @@
 </nav>
 <style>
     body {
-        background-color: rgb(218, 225, 233);
+        font-family: 'Poppins', sans-serif;
     }
 
     @media only screen and (min-width: 960px) {

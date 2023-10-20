@@ -43,16 +43,17 @@ if ($_POST['exam_rol_no'] >= 1000) {
 <body>
     <div class='container my-3' style="min-width: 700px;">
         <div class="border ">
-            <div class="text-center my-5">
-                <h3>Talent Hunt Exam 2022</h3>
+            <div class="text-center my-5" style="font-family: 'Young Serif', serif;">
+                <h3>Talent Hunt Exam 2023</h3>
                 <h4>Kendra Mahatha Ladania</h4>
-                <h5 class="mt-3"><u>Admit Card</u></h5>
+                <h5 class="mt-3 fw-bold">Admit Card</h5>
             </div>
             <div class="ms-5 mb-5">
                 <p><b>Student Name:</b> <?php echo strtoupper($row['student_name']) ?></p>
                 <p><b>Exam Roll Number:</b> <?php echo $exam_rol_no ?></p>
-                <p><b>Exam Center:</b> Rajkiya Madhya Vidhyalaya Mahatha</p>
-                <p><b>Exam Date:</b> 26 October, 2022</p>
+                <p><b>Exam Center:</b> Gayatri Mandir, Gram Mahatha
+                </p>
+                <p><b>Exam Date:</b> 21 October, 2023</p>
                 <p><b>Exam Time:</b> 09:30 AM</p>
             </div>
         </div>
@@ -60,14 +61,14 @@ if ($_POST['exam_rol_no'] >= 1000) {
             <!--    <button onclick="window.print()">Print</button> -->
         </center>
     </div>
-    <script> 
-        function printPage(){
+    <script>
+        function printPage() {
             // Do print the page
             if (typeof(window.print) != 'undefined') {
-               window.print();
+                window.print();
             }
         }
-        window.load=printPage();
+        window.load = printPage();
     </script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p' crossorigin='anonymous'></script>

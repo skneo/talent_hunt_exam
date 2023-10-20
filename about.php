@@ -17,8 +17,10 @@ session_start();
     include 'header.php';
     ?>
     <div class='container my-3'>
-        <h4>About Us</h4>
-        <img src="images/exam.jpg" alt="talent" class="mb-3" height="300px">
+        <center>
+            <h3>About Us</h3>
+            <img src="images/img1.jpeg" alt="talent" class="mb-3 rounded" height="300px">
+        </center>
         <p>
             <b>The Talent Hunt Exam</b> is one of the most prestigious exams conducted for school students for class 10th. The exams as the name suggest identifying hidden talent in school children. The organization believes that all children are blessed with unique qualities. Parents must expose their talent, polish it and present it in front of the world. The exam is conducted in subjects of syllabus covering High School and some General Knowledge.
         </p>

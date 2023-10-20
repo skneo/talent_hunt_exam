@@ -48,11 +48,13 @@ function validateInput($data)
             $student_class = '10';
             $phone = validateInput($_GET['phone']);
             $email = validateInput($_GET['email']);
-            $center = "Rajkiya Madhya Vidhyalaya Mahatha";
+            $center = "";
+            $coaching = validateInput($_GET['coaching']);
+            $photo = "photo_url";
             date_default_timezone_set('Asia/Kolkata');
             $curr_date = date('Y-m-d H:i:s');
             $sql = <<<EOF
-            INSERT INTO applications VALUES (NULL,'$student_name','$father_name','$address','$school','$student_class','$sch_rol_no','$phone','$email','$center',1,'$curr_date');
+            INSERT INTO applications VALUES (NULL,'$student_name','$father_name','$address','$school','$student_class','$sch_rol_no','$phone','$email','$center',1,'$curr_date','$coaching','$photo');
             EOF;
             // include_once 'dbCon.php';
             $ret = $db->exec($sql);
