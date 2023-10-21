@@ -47,14 +47,15 @@ include 'dbCon.php';
                         <th>Exam Roll No</th>
                         <th>Student Name</th>
                         <th>Father Name</th>
-                        <th>Address</th>
-                        <th>School</th>
+                        <th style="min-width: 200px;">Address</th>
+                        <th style="min-width: 200px;">School</th>
+                        <th>Coaching</th>
                         <th>Class</th>
                         <th>School Roll No</th>
                         <th>Parent's Phone</th>
                         <th>Email</th>
                         <th>Center</th>
-                        <th>Applied On</th>
+                        <th style="min-width: 150px;">Applied On</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -68,11 +69,12 @@ include 'dbCon.php';
                     while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
                         $exam_rol_no = 1000 + $row['exam_rol_no'];
                         echo "<tr>" .
-                            "<td>" .  $exam_rol_no . "</td>" .
+                            "<td><a href='view_admit_card.php?exam_rol_no=$exam_rol_no'>$exam_rol_no</a></td>" .
                             "<td>" . $row['student_name'] . "</td>" .
                             "<td>" . $row['father_name'] . "</td>" .
                             "<td>" . $row['address'] . "</td>" .
                             "<td>" . $row['school'] . "</td>" .
+                            "<td>" . $row['coaching'] . "</td>" .
                             "<td>" . $row['class'] . "</td>" .
                             "<td>" . $row['school_rol_no'] . "</td>" .
                             "<td>" . $row['parents_phone'] . "</td>" .

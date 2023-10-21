@@ -90,6 +90,8 @@ function validateInput($data)
                 <?php
                 if (isset($_GET['student_name'])) {
                     echo " <input type='number' class='form-control' id='exam_rol_no' name='exam_rol_no' value='$exam_rol_no' required>";
+                } else if (isset($_GET['exam_rol_no'])) {
+                    echo " <input type='number' class='form-control' id='exam_rol_no' name='exam_rol_no' value='" . $_GET['exam_rol_no'] . "' required>";
                 } else {
                     echo " <input type='number' class='form-control' id='exam_rol_no' name='exam_rol_no' required>";
                 }
