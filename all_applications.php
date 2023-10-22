@@ -70,7 +70,7 @@ include 'dbCon.php';
                         $exam_rol_no = 1000 + $row['exam_rol_no'];
                         echo "<tr>" .
                             "<td><a href='view_admit_card.php?exam_rol_no=$exam_rol_no'>$exam_rol_no</a></td>" .
-                            "<td>" . $row['student_name'] . "</td>" .
+                            "<td><a href='roll_no_detail.php?exam_rol_no=$exam_rol_no'>" . $row['student_name'] . "</a></td>" .
                             "<td>" . $row['father_name'] . "</td>" .
                             "<td>" . $row['address'] . "</td>" .
                             "<td>" . $row['school'] . "</td>" .

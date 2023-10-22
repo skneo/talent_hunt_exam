@@ -42,23 +42,36 @@ if ($_POST['exam_rol_no'] >= 1000) {
 
 <body>
     <div class='container my-3' style="min-width: 700px;">
-        <div class="border ">
+        <div class="border px-5 pb-5">
             <div class="text-center my-5" style="font-family: 'Young Serif', serif;">
                 <h3>Talent Hunt Exam 2023</h3>
                 <h4>Kendra Mahatha Ladania</h4>
                 <h5 class="mt-3 fw-bold">Admit Card</h5>
             </div>
-            <div class="ms-5 mb-5">
-                <p><b>Student Name:</b> <?php echo strtoupper($row['student_name']) ?></p>
-                <p><b>Exam Roll Number:</b> <?php echo $exam_rol_no ?></p>
-                <p><b>Exam Center:</b> Gayatri Mandir, Gram Mahatha
-                </p>
-                <p><b>Exam Date:</b> 21 October, 2023</p>
-                <p><b>Exam Time:</b> 09:30 AM</p>
+            <div class="row mb-5">
+                <div class="col-8">
+                    <p><b>Student Name:</b> <?php echo strtoupper($row['student_name']) ?></p>
+                    <p><b>Exam Roll Number:</b> <?php echo $exam_rol_no ?></p>
+                    <p><b>Exam Center:</b> Gayatri Mandir, Gram Mahatha
+                    </p>
+                    <p><b>Exam Date:</b> 21 November, 2023</p>
+                    <p><b>Exam Time:</b> 09:30 AM</p>
+                </div>
+                <div class="col-4">
+                    <label class='mb-2 fw-bold'>Candidate's Photo</label>
+                    <img src="images/candidates/<?php echo $row['photo'] ?>" alt="candidates photo" id='photo' width="105" height="135px" style="display: block;">
+                </div>
+            </div>
+            <div class="my-3">
+                <h5>Important instructions</h5>
+                <ul>
+                    <li>Bring your admit card to exam center</li>
+                    <li>Bring Aadhar Card to center for examination</li>
+                </ul>
             </div>
         </div>
         <center class="mt-3">
-            <!--    <button onclick="window.print()">Print</button> -->
+            <button onclick="printPage()">Print</button>
         </center>
     </div>
     <script>
@@ -68,7 +81,7 @@ if ($_POST['exam_rol_no'] >= 1000) {
                 window.print();
             }
         }
-        window.load = printPage();
+        // window.load = printPage();
     </script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p' crossorigin='anonymous'></script>

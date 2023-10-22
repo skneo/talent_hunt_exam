@@ -18,7 +18,7 @@ session_start();
     ?>
     <div class='container my-3'>
         <h4>Apply for Talent Hunt Exam 2023</h4>
-        <form method='GET' action='verify.php'>
+        <form method='POST' action='view_admit_card.php' enctype='multipart/form-data'>
             <div class="row">
                 <div class='mb-3 col-md-4'>
                     <label for='student_name' class='form-label float-start'>Student Name * </label>
@@ -44,12 +44,11 @@ session_start();
                 </div>
                 <div class='mb-3 col-md-4'>
                     <label for='coaching' class='form-label float-start'>Coaching Name</label>
-                    <textarea name="coaching" oninput="this.value = this.value.toUpperCase()" id="coaching" cols="30" rows="2" class='form-control' required></textarea>
-
+                    <textarea name="coaching" oninput="this.value = this.value.toUpperCase()" id="coaching" cols="30" rows="2" class='form-control'></textarea>
                 </div>
                 <div class='mb-3 col-md-4'>
                     <label for='sch_rol_no' class='form-label float-start'>School Roll No * </label>
-                    <input type='text' oninput="this.value = this.value.toUpperCase()" class='form-control' id='sch_rol_no' name='sch_rol_no' required>
+                    <input type='number' min='1' oninput="this.value = this.value.toUpperCase()" class='form-control' id='sch_rol_no' name='sch_rol_no' required>
                 </div>
                 <div class='mb-3 col-md-4'>
                     <label for='phone' class='form-label float-start'>Parent's Mobile Number * </label>
@@ -60,11 +59,10 @@ session_start();
                     <label for='email' class='form-label float-start'>Email</label>
                     <input type='text' class='form-control' id='email' name='email'>
                 </div>
-
                 <div class='mb-3 col-md-4'>
                     <label for='fileToUpload' class='form-label float-start'>Candidate's Photo *</label>
                     <input type='file' accept="image/*" class='form-control' id='fileToUpload' name='fileToUpload' required onchange="validateFile()">
-                    <div class='text-danger' id='fileErrror' style="display:none ;">File size is greater than 200 kb</div>
+                    <div class='text-danger' id='fileErrror' style="display:none ;">File size is greater than 100 kb</div>
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="photo">Photo Preview</label>

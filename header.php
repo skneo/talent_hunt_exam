@@ -44,7 +44,7 @@
             } else {
                 echo "<form class='d-flex me-2 mb-2 mb-md-0' role='search' action='roll_no_detail.php'>
                         <div class='input-group'>
-                            <input name='exam_rol_no' class='form-control' type='search' aria-label='Search' placeholder='Roll No' required>
+                            <input name='exam_rol_no' class='form-control' type='number' aria-label='Search' placeholder='Roll No' required>
                             <button class='btn btn-primary' type='submit'><i class='bi bi-search'></i></button>
                         </div>
                     </form>

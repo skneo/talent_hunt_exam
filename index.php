@@ -18,6 +18,15 @@ session_start();
     ?>
     <div class='container my-3'>
         <h3 class="text-center">Talent Hunt Exam 2023 Kendra Mahatha Ladania</h3>
+        <div class="border p-3 m-3">
+            <ul>
+                <li>
+                    Registration open <a href="apply.php">New Application</a>
+                </li>
+                <li>Last Date of Registration is 18.11.2023</li>
+                <li>Exam date is 21.11.2023</li>
+            </ul>
+        </div>
         <div id="carouselExampleInterval" class="carousel slide mb-3" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="2000">

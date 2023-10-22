@@ -75,7 +75,7 @@ function validateInput($data)
             while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
                 $exam_rol_no = 1000 + $row['exam_rol_no'];
                 echo "<tr>" .
-                    "<td>" .  $exam_rol_no . "</td>" .
+                    "<td><a href='view_admit_card.php?exam_rol_no=$exam_rol_no'>$exam_rol_no</a></td>" .
                     "<td>" . $row['student_name'] . "</td>" .
                     "<td>" . $row['father_name'] . "</td>" .
                     "<td>" . $row['school'] . "</td>" .

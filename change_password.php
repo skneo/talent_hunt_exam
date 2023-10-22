@@ -54,10 +54,10 @@ if (isset($_POST['pwd1'])) {
         <h4 class="mt-3">Change Password</h4>
         <form method="POST" class="mt-5" style="width: 220px" action="change_password.php">
             <div class=" mb-3">
-                <input required placeholder="Enter new password" type="password" class="form-control" id="pwd1" name="pwd1">
+                <input minlength="6" required placeholder="Enter new password" type="password" class="form-control" id="pwd1" name="pwd1">
             </div>
             <div class="mb-3">
-                <input required placeholder="Enter new password again" type="password" class="form-control" id="pwd2" name="pwd2">
+                <input minlength="6" required placeholder="Enter new password again" type="password" class="form-control" id="pwd2" name="pwd2">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
