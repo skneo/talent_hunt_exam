@@ -64,7 +64,7 @@ function validateInput($data)
         $timeStamp = date('Ymd-His');
         $sch_rol_no = validateInput($_POST['sch_rol_no']);
         $temp = explode(".", $_FILES["fileToUpload"]["name"]);
-        $newfilename = $sch_rol_no . "-$timeStamp." . end($temp);
+        $newfilename = $_POST['student_name'] . '-' . $sch_rol_no . "-$timeStamp." . end($temp);
         $target_file = "images/candidates/" . $newfilename;
         $file_type = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
         // check file type
@@ -87,11 +87,12 @@ function validateInput($data)
                 $email = validateInput($_POST['email']);
                 $center = "";
                 $coaching = validateInput($_POST['coaching']);
+                $id_mark = validateInput($_POST['id_mark']);
                 $photo = $filename;
                 date_default_timezone_set('Asia/Kolkata');
                 $curr_date = date('Y-m-d H:i:s');
                 $sql = <<<EOF
-                INSERT INTO applications VALUES (NULL,'$student_name','$father_name','$address','$school','$student_class','$sch_rol_no','$phone','$email','$center',1,'$curr_date','$coaching','$photo');
+                INSERT INTO applications VALUES (NULL,'$student_name','$father_name','$address','$school','$student_class','$sch_rol_no','$phone','$email','$center',1,'$curr_date','$coaching','$photo','$id_mark');
                 EOF;
                 // include_once 'dbCon.php';
                 $ret = $db->exec($sql);
@@ -117,6 +118,8 @@ function validateInput($data)
                 <strong >Error! Application not submitted</strong>
                 <button type='button' class='btn-close pb-2' data-bs-dismiss='alert' aria-label='Close'></button>
             </div>";
+                echo "<a href='apply.php' class='btn btn-primary mt-3 ms-3'>&larr; Back</a>";
+                exit();
             }
         }
     }

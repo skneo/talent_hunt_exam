@@ -70,6 +70,7 @@ if (!isset($_SESSION['loggedin'])) {
                 <p><b>SCHOOL ROLL NO:</b> <?php echo $row['school_rol_no'] ?></p>
                 <p><b>PHONE:</b> <?php echo $row['parents_phone'] ?></p>
                 <p><b>EMAIL:</b> <?php echo $row['email'] ?></p>
+                <p><b>Identi. Mark:</b> <?php echo $row['id_mark'] ?></p>
             </div>
         </div>
 

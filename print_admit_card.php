@@ -50,12 +50,14 @@ if ($_POST['exam_rol_no'] >= 1000) {
             </div>
             <div class="row mb-5">
                 <div class="col-8">
-                    <p><b>Student Name:</b> <?php echo strtoupper($row['student_name']) ?></p>
+                    <p><b>Student Name:</b> <?php echo $row['student_name'] ?></p>
                     <p><b>Exam Roll Number:</b> <?php echo $exam_rol_no ?></p>
                     <p><b>Exam Center:</b> Gayatri Mandir, Gram Mahatha
                     </p>
                     <p><b>Exam Date:</b> 21 November, 2023</p>
-                    <p><b>Exam Time:</b> 09:30 AM</p>
+                    <p><b>Reporting Time:</b> 09:30 AM</p>
+                    <p><b>Exam Time:</b> 09:45 AM</p>
+                    <p><b>Identification Mark:</b> <?php echo $row['id_mark'] ?></p>
                 </div>
                 <div class="col-4">
                     <label class='mb-2 fw-bold'>Candidate's Photo</label>
@@ -65,24 +67,23 @@ if ($_POST['exam_rol_no'] >= 1000) {
             <div class="my-3">
                 <h5>Important instructions</h5>
                 <ul>
-                    <li>Bring your admit card to exam center</li>
-                    <li>Bring Aadhar Card to center for examination</li>
+                    <li>Any type of electronic gadget like smartphone, smart watches, bluettooth devices etc. are not allowed in examination hall</li>
+                    <li>Bring your admit card to examination center</li>
+                    <li>Bring Aadhar Card to examination center for identification</li>
                 </ul>
             </div>
         </div>
-        <center class="mt-3">
-            <button onclick="printPage()">Print</button>
+        <center class="mt-3 printbtn">
+            <button onclick="window.print()">Print</button>
         </center>
     </div>
-    <script>
-        function printPage() {
-            // Do print the page
-            if (typeof(window.print) != 'undefined') {
-                window.print();
+    <style>
+        @media print {
+            .printbtn {
+                display: none;
             }
         }
-        // window.load = printPage();
-    </script>
+    </style>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p' crossorigin='anonymous'></script>
 </body>

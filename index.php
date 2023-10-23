@@ -18,12 +18,12 @@ session_start();
     ?>
     <div class='container my-3'>
         <h3 class="text-center">Talent Hunt Exam 2023 Kendra Mahatha Ladania</h3>
-        <div class="border p-3 m-3">
+        <div class="border py-3 my-3">
             <ul>
                 <li>
                     Registration open <a href="apply.php">New Application</a>
                 </li>
-                <li>Last Date of Registration is 18.11.2023</li>
+                <li>Last Date of Registration is 05.11.2023</li>
                 <li>Exam date is 21.11.2023</li>
             </ul>
         </div>

@@ -60,9 +60,14 @@ session_start();
                     <input type='text' class='form-control' id='email' name='email'>
                 </div>
                 <div class='mb-3 col-md-4'>
+                    <label for='id_mark' class='form-label float-start'>Identification Mark *</label>
+                    <input type='text' class='form-control' id='id_mark' name='id_mark' required>
+                </div>
+                <div class='mb-3 col-md-4'>
                     <label for='fileToUpload' class='form-label float-start'>Candidate's Photo *</label>
                     <input type='file' accept="image/*" class='form-control' id='fileToUpload' name='fileToUpload' required onchange="validateFile()">
                     <div class='text-danger' id='fileErrror' style="display:none ;">File size is greater than 100 kb</div>
+                    <small class="text-muted">maximum 100 kb</small>
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="photo">Photo Preview</label>
@@ -73,7 +78,6 @@ session_start();
                     <p>* fiels required</p>
                 </div>
             </div>
-
         </form>
         <script>
             function validateFile() {

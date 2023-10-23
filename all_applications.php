@@ -22,6 +22,12 @@ include 'dbCon.php';
     include 'header.php';
     if (isset($_GET['delete_application'])) {
         $delete_application = $_GET['delete_application'];
+        $sql = <<<EOF
+        SELECT * from applications WHERE exam_rol_no='$delete_application' ;
+        EOF;
+        $ret = $db->query($sql);
+        $row = $ret->fetchArray(SQLITE3_ASSOC);
+        unlink('images/candidates/' . $row['photo']);
         $rol_no = $delete_application + 1000;
         $sql = <<<EOF
         DELETE from applications where exam_rol_no = '$delete_application';
@@ -54,6 +60,7 @@ include 'dbCon.php';
                         <th>School Roll No</th>
                         <th>Parent's Phone</th>
                         <th>Email</th>
+                        <th>Identification Mark</th>
                         <th>Center</th>
                         <th style="min-width: 150px;">Applied On</th>
                         <th>Action</th>
@@ -79,6 +86,7 @@ include 'dbCon.php';
                             "<td>" . $row['school_rol_no'] . "</td>" .
                             "<td>" . $row['parents_phone'] . "</td>" .
                             "<td>" . $row['email'] . "</td>" .
+                            "<td>" . $row['id_mark'] . "</td>" .
                             "<td>" . $row['center'] . "</td>" .
                             "<td>" . $row['applied_on'] . "</td>" .
                             "<td>" . "<a href='all_applications.php?delete_application=" . $row['exam_rol_no'] . "' class='btn btn-danger btn-sm' onclick=\"return confirm('Sure to delete application of Roll no $exam_rol_no?')\">Delete</a>" . "</td>" .
