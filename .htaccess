@@ -11,5 +11,5 @@ Options -Indexes
 
 # comment below 3 lines to access phpliteadmin
 # <Files "phpliteadmin.php">
-#     Require all denied
+#    Require all denied
 # </Files>

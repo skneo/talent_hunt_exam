@@ -66,7 +66,9 @@
     body {
         font-family: 'Poppins', sans-serif;
     }
-
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
     @media only screen and (min-width: 960px) {
         .navbar .navbar-nav .nav-item .nav-link {
             padding: 0 0.5em;

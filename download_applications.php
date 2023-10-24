@@ -22,11 +22,15 @@ include 'dbCon.php';
     include 'header.php';
     ?>
     <div class='container-fluid my-3'>
-        <div class="d-flex">
-            <h4 class="me-5">All Applications</h4>
-            <button type="button" class="btn btn-primary btn-sm ms-5" id='tableexport'>Download Table</button>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>All Applications</h4>
+            </div>
+            <div class="col-md-6">
+                <a href='#' id='tableexport'>Download Table</a>
+            </div>
         </div>
-        <div class="my-3 container-fluid">
+        <div class="my-3 table-responsive">
             <table id="table_id" class="table-light table table-striped table-bordered w-100">
                 <!-- <thead> -->
                 <tr>
@@ -35,15 +39,16 @@ include 'dbCon.php';
                     <th>Father Name</th>
                     <th>Address</th>
                     <th>School</th>
-                    <th>Class</th>
+                    <th>Coaching</th>
+                    <!-- <th>Class</th> -->
                     <th>School Roll No</th>
                     <th>Parent's Phone</th>
                     <th>Email</th>
+                    <th>Identification Mark</th>
                 </tr>
                 <!-- </thead> -->
                 <tbody>
                     <?php
-                    // include 'dbCon.php';
                     $sql = <<<EOF
                     SELECT * from applications;
                     EOF;
@@ -56,10 +61,12 @@ include 'dbCon.php';
                             "<td>" . $row['father_name'] . "</td>" .
                             "<td>" . $row['address'] . "</td>" .
                             "<td>" . $row['school'] . "</td>" .
-                            "<td>" . $row['class'] . "</td>" .
+                            "<td>" . $row['coaching'] . "</td>" .
+                            // "<td>" . $row['class'] . "</td>" .
                             "<td>" . $row['school_rol_no'] . "</td>" .
                             "<td>" . $row['parents_phone'] . "</td>" .
                             "<td>" . $row['email'] . "</td>" .
+                            "<td>" . $row['id_mark'] . "</td>" .
                             "</tr>";
                     }
                     $db->close();
@@ -75,6 +82,7 @@ include 'dbCon.php';
             </script>
         </div>
     </div>
+    <?php include 'footer.php'; ?>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p' crossorigin='anonymous'></script>
 </body>

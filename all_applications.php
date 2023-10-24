@@ -43,10 +43,15 @@ include 'dbCon.php';
     }
     ?>
     <div class='container-fluid my-3'>
-        <div class="d-flex">
-            <h4 class="me-5">All Applications</h4> <a href="download_applications.php" class="btn btn-primary btn-sm ms-5">Export Table</a>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>All Applications</h4> 
+            </div>
+            <div class="col-md-6">
+                <a href="download_applications.php">Export Table</a>
+            </div>
         </div>
-        <div class="my-3 container-fluid">
+        <div class="my-3">
             <table id="table_id" class="table-light table table-striped table-bordered w-100">
                 <thead>
                     <tr>
@@ -56,12 +61,12 @@ include 'dbCon.php';
                         <th style="min-width: 200px;">Address</th>
                         <th style="min-width: 200px;">School</th>
                         <th>Coaching</th>
-                        <th>Class</th>
+                        <!-- <th>Class</th> -->
                         <th>School Roll No</th>
                         <th>Parent's Phone</th>
                         <th>Email</th>
                         <th>Identification Mark</th>
-                        <th>Center</th>
+                        <!-- <th>Center</th> -->
                         <th style="min-width: 150px;">Applied On</th>
                         <th>Action</th>
                     </tr>
@@ -82,12 +87,12 @@ include 'dbCon.php';
                             "<td>" . $row['address'] . "</td>" .
                             "<td>" . $row['school'] . "</td>" .
                             "<td>" . $row['coaching'] . "</td>" .
-                            "<td>" . $row['class'] . "</td>" .
+                            // "<td>" . $row['class'] . "</td>" .
                             "<td>" . $row['school_rol_no'] . "</td>" .
                             "<td>" . $row['parents_phone'] . "</td>" .
                             "<td>" . $row['email'] . "</td>" .
                             "<td>" . $row['id_mark'] . "</td>" .
-                            "<td>" . $row['center'] . "</td>" .
+                            // "<td>" . $row['center'] . "</td>" .
                             "<td>" . $row['applied_on'] . "</td>" .
                             "<td>" . "<a href='all_applications.php?delete_application=" . $row['exam_rol_no'] . "' class='btn btn-danger btn-sm' onclick=\"return confirm('Sure to delete application of Roll no $exam_rol_no?')\">Delete</a>" . "</td>" .
                             "</tr>";
@@ -110,6 +115,7 @@ include 'dbCon.php';
             </script>
         </div>
     </div>
+    <?php include 'footer.php'; ?>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p' crossorigin='anonymous'></script>
 </body>

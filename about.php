@@ -25,6 +25,7 @@ session_start();
             <b>The Talent Hunt Exam</b> is one of the most prestigious exams conducted for school students for class 10th. The exams as the name suggest identifying hidden talent in school children. The organization believes that all children are blessed with unique qualities. Parents must expose their talent, polish it and present it in front of the world. The exam is conducted in subjects of syllabus covering High School and some General Knowledge.
         </p>
     </div>
+    <?php include 'footer.php'; ?>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p' crossorigin='anonymous'></script>
 </body>

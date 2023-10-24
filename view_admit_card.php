@@ -64,7 +64,7 @@ function validateInput($data)
         $timeStamp = date('Ymd-His');
         $sch_rol_no = validateInput($_POST['sch_rol_no']);
         $temp = explode(".", $_FILES["fileToUpload"]["name"]);
-        $newfilename = $_POST['student_name'] . '-' . $sch_rol_no . "-$timeStamp." . end($temp);
+        $newfilename = bin2hex(random_bytes(4)) . '-' . $sch_rol_no . "-$timeStamp." . end($temp);
         $target_file = "images/candidates/" . $newfilename;
         $file_type = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
         // check file type
@@ -148,6 +148,7 @@ function validateInput($data)
             <button type='submit' class='btn btn-primary'>Print Admit Card</button>
         </form>
     </div>
+    <?php include 'footer.php'; ?>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p' crossorigin='anonymous'></script>
 </body>

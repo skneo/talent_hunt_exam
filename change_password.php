@@ -52,7 +52,7 @@ if (isset($_POST['pwd1'])) {
     ?>
     <center>
         <h4 class="mt-3">Change Password</h4>
-        <form method="POST" class="mt-5" style="width: 220px" action="change_password.php">
+        <form method="POST" class="my-5" style="width: 220px" action="change_password.php">
             <div class=" mb-3">
                 <input minlength="6" required placeholder="Enter new password" type="password" class="form-control" id="pwd1" name="pwd1">
             </div>
@@ -62,6 +62,7 @@ if (isset($_POST['pwd1'])) {
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </center>
+    <?php include 'footer.php'; ?>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 </body>

@@ -18,7 +18,7 @@ session_start();
     ?>
     <div class='container my-3'>
         <h4>Apply for Talent Hunt Exam 2023</h4>
-        <form method='POST' action='view_admit_card.php' enctype='multipart/form-data'>
+        <form method='POST' class='needs-validation' action='view_admit_card.php' enctype='multipart/form-data' novalidate>
             <div class="row">
                 <div class='mb-3 col-md-4'>
                     <label for='student_name' class='form-label float-start'>Student Name * </label>
@@ -101,8 +101,26 @@ session_start();
                     document.getElementById("photo").src = '';
                 }
             }
+
+            // form validation
+            (() => {
+            'use strict'
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
+                form.classList.add('was-validated')
+                }, false)
+            })
+            })()
         </script>
     </div>
+    <?php include 'footer.php'; ?>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p' crossorigin='anonymous'></script>
 </body>

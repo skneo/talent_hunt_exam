@@ -67,7 +67,7 @@ if ($_POST['exam_rol_no'] >= 1000) {
             <div class="my-3">
                 <h5>Important instructions</h5>
                 <ul>
-                    <li>Any type of electronic gadget like smartphone, smart watches, bluettooth devices etc. are not allowed in examination hall</li>
+                    <li>Any type of electronic gadget like smartphone, smart watches, bluetooth devices etc. are not allowed in examination hall</li>
                     <li>Bring your admit card to examination center</li>
                     <li>Bring Aadhar Card to examination center for identification</li>
                 </ul>
