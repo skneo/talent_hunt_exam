@@ -73,6 +73,7 @@ if (!isset($_SESSION['loggedin'])) {
                 <p><b>Identi. Mark:</b> <?php echo $row['id_mark'] ?></p>
             </div>
         </div>
+        <a href="all_applications.php?delete_application=<?php echo $row['exam_rol_no'] ?>" class="btn btn-outline-danger" onclick="return confirm('Sure to delete ?')">Delete</a>
     </div>
     <?php include 'footer.php'; ?>
     <!-- Option 1: Bootstrap Bundle with Popper -->

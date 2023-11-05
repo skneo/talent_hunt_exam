@@ -45,7 +45,7 @@ include 'dbCon.php';
     <div class='container-fluid my-3'>
         <div class="row">
             <div class="col-md-6">
-                <h4>All Applications</h4> 
+                <h4>All Applications</h4>
             </div>
             <div class="col-md-6">
                 <a href="download_applications.php">Export Table</a>
@@ -56,7 +56,7 @@ include 'dbCon.php';
                 <thead>
                     <tr>
                         <th>Exam Roll No</th>
-                        <th>Student Name</th>
+                        <th style='position:sticky; left:0'>Student Name</th>
                         <th>Father Name</th>
                         <th style="min-width: 200px;">Address</th>
                         <th style="min-width: 200px;">School</th>
@@ -68,7 +68,6 @@ include 'dbCon.php';
                         <th>Identification Mark</th>
                         <!-- <th>Center</th> -->
                         <th style="min-width: 150px;">Applied On</th>
-                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -82,7 +81,7 @@ include 'dbCon.php';
                         $exam_rol_no = 1000 + $row['exam_rol_no'];
                         echo "<tr>" .
                             "<td><a href='view_admit_card.php?exam_rol_no=$exam_rol_no'>$exam_rol_no</a></td>" .
-                            "<td><a href='roll_no_detail.php?exam_rol_no=$exam_rol_no'>" . $row['student_name'] . "</a></td>" .
+                            "<td style='position:sticky; left:0'><a href='roll_no_detail.php?exam_rol_no=$exam_rol_no'>" . $row['student_name'] . "</a></td>" .
                             "<td>" . $row['father_name'] . "</td>" .
                             "<td>" . $row['address'] . "</td>" .
                             "<td>" . $row['school'] . "</td>" .
@@ -94,7 +93,6 @@ include 'dbCon.php';
                             "<td>" . $row['id_mark'] . "</td>" .
                             // "<td>" . $row['center'] . "</td>" .
                             "<td>" . $row['applied_on'] . "</td>" .
-                            "<td>" . "<a href='all_applications.php?delete_application=" . $row['exam_rol_no'] . "' class='btn btn-danger btn-sm' onclick=\"return confirm('Sure to delete application of Roll no $exam_rol_no?')\">Delete</a>" . "</td>" .
                             "</tr>";
                     }
                     $db->close();
