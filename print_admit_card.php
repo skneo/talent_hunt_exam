@@ -98,12 +98,12 @@ if ($_POST['exam_rol_no'] >= 20241000) {
                 <div class='text-muted mt-5 small'>
                     <h5>Sponsors</h5>
                     <ul>
-                        <li>M/s RBS & Associates Tax Consultants</li>
-                        <li>Jitendta Pustak Bhandar Ladaniya</li>
-                        <li>Sri Card and Computer Centre Ladaniya</li>
-                        <li>Raj Stationary Ladaniya</li>
+                        <li>M/s RBS & Associates Tax Consultants (Raja Babu Sah) Mob no 9534716884, 8789130988</li>
+                        <li>Jitendta Pustak Bhandar Ladania</li>
+                        <li>Sri Card and Computer Centre Ladania</li>
+                        <li>Raj Stationary Ladania</li>
                         <li>Excellent Biology Classes Darbhanga</li>
-                        <li>Raja Motor Garage Ladaniya</li>
+                        <li>Raja Motor Garage Ladania</li>
                         <li>Matrixe Code Innovations ( matrixe.in ), provides affordable school software</li>
                     </ul>
                 </div>
