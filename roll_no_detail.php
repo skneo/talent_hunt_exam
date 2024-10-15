@@ -33,8 +33,8 @@ if (!isset($_SESSION['loggedin'])) {
         if (!isset($_GET['exam_rol_no'])) {
             exit("Error");
         }
-        if ($_GET['exam_rol_no'] >= 1000) {
-            $exam_rol_no = $_GET['exam_rol_no'] - 1000;
+        if ($_GET['exam_rol_no'] >= 20241000) {
+            $exam_rol_no = $_GET['exam_rol_no'] - 20241000;
             $sql = <<<EOF
         SELECT * from applications WHERE exam_rol_no='$exam_rol_no' ;
         EOF;
@@ -46,7 +46,7 @@ if (!isset($_SESSION['loggedin'])) {
                 $db->close();
                 exit;
             }
-            $exam_rol_no = $row['exam_rol_no'] + 1000;
+            $exam_rol_no = $row['exam_rol_no'] + 20241000;
             $db->close();
         } else {
             echo "<p class='text-danger'>Roll number " . $_GET['exam_rol_no'] . " does not exist</p>";

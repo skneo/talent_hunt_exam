@@ -9,8 +9,8 @@ function validateInput($data)
 if (!isset($_POST['exam_rol_no'])) {
     exit("Error");
 }
-if ($_POST['exam_rol_no'] >= 1000) {
-    $exam_rol_no = validateInput($_POST['exam_rol_no']) - 1000;
+if ($_POST['exam_rol_no'] >= 20241000) {
+    $exam_rol_no = validateInput($_POST['exam_rol_no']) - 20241000;
     $sql = <<<EOF
     SELECT * from applications WHERE exam_rol_no='$exam_rol_no' ;
     EOF;
@@ -22,7 +22,7 @@ if ($_POST['exam_rol_no'] >= 1000) {
         $db->close();
         exit;
     }
-    $exam_rol_no = $row['exam_rol_no'] + 1000;
+    $exam_rol_no = $row['exam_rol_no'] + 20241000;
     $db->close();
 } else {
     echo "Roll number " . $_POST['exam_rol_no'] . " does not exist";
@@ -49,19 +49,43 @@ if ($_POST['exam_rol_no'] >= 1000) {
                 <h5 class="mt-3 fw-bold">Admit Card</h5>
             </div>
             <div class="row mb-5">
-                <div class="col-9">
-                    <p><b>Student Name:</b> <?php echo $row['student_name'] ?></p>
-                    <p><b>Exam Roll Number:</b> <?php echo $exam_rol_no ?></p>
-                    <p><b>Exam Center:</b> Rajkiya Madhya Vidyalaya, Gram Mahatha
-                    </p>
-                    <p><b>Exam Date:</b> 03 November, 2024</p>
-                    <p><b>Reporting Time:</b> 09:30 AM</p>
-                    <p><b>Exam Time:</b> 09:45 AM</p>
-                    <p><b>Identification Mark:</b> <?php echo $row['id_mark'] ?></p>
-                </div>
-                <div class="col-3">
-                    <label class='mb-2 fw-bold'>Candidate's Photo</label>
-                    <img src="images/candidates/<?php echo $row['photo'] ?>" alt="candidates photo" class='border rounded' id='photo' width="105" height="135px" style="display: block;">
+                <div class="">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>Student Name</th>
+                            <td><?php echo $row['student_name']; ?></td>
+                            <th>Student Photo</th>
+                        </tr>
+                        <tr>
+                            <th>Exam Roll Number</th>
+                            <td><?php echo $exam_rol_no; ?></td>
+                            <td rowspan="6">
+                                <center>
+                                    <img src="images/candidates/<?php echo $row['photo']; ?>" alt="candidate's photo" class='border rounded' id='photo' width="105" height="135px" style="display: block;">
+                                </center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Exam Center</th>
+                            <td>Rajkiya Madhya Vidyalaya, Gram Mahatha</td>
+                        </tr>
+                        <tr>
+                            <th>Exam Date</th>
+                            <td>03 November, 2024</td>
+                        </tr>
+                        <tr>
+                            <th>Reporting Time</th>
+                            <td>09:30 AM</td>
+                        </tr>
+                        <tr>
+                            <th>Exam Time</th>
+                            <td>09:45 AM</td>
+                        </tr>
+                        <tr>
+                            <th>Identification Mark</th>
+                            <td><?php echo $row['id_mark']; ?></td>
+                        </tr>
+                    </table>
                 </div>
             </div>
             <div class="mt-3">
@@ -75,11 +99,11 @@ if ($_POST['exam_rol_no'] >= 1000) {
                     <h5>Sponsors</h5>
                     <ul>
                         <li>M/s RBS & Associates Tax Consultants</li>
-                        <li>Jitendta Pustak Bhandar Ladhaniya</li>
-                        <li>Sri Card and Computer Centre Ladhaniya</li>
-                        <li>Raj Stationary Ladhaniya</li>
+                        <li>Jitendta Pustak Bhandar Ladaniya</li>
+                        <li>Sri Card and Computer Centre Ladaniya</li>
+                        <li>Raj Stationary Ladaniya</li>
                         <li>Excellent Biology Classes Darbhanga</li>
-                        <li>Raja Motor Garage Ladhaniya</li>
+                        <li>Raja Motor Garage Ladaniya</li>
                         <li>Matrixe Code Innovations ( matrixe.in ), provides affordable school software</li>
                     </ul>
                 </div>

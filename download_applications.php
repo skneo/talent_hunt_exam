@@ -54,7 +54,7 @@ include 'dbCon.php';
                     EOF;
                     $ret = $db->query($sql);
                     while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
-                        $exam_rol_no = 1000 + $row['exam_rol_no'];
+                        $exam_rol_no = 20241000 + $row['exam_rol_no'];
                         echo "<tr>" .
                             "<td>" .  $exam_rol_no . "</td>" .
                             "<td>" . $row['student_name'] . "</td>" .

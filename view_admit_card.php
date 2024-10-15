@@ -108,7 +108,7 @@ function validateInput($data)
                 // select last_insert_rowid();
                 $ret = $db->query($sql);
                 $row = $ret->fetchArray(SQLITE3_ASSOC);
-                $exam_rol_no = $row['exam_rol_no'] + 1000;
+                $exam_rol_no = $row['exam_rol_no'] + 20241000;
                 echo "<div class='alert alert-success' role='alert'>
                 Application submitted successfully!
                 </div>";

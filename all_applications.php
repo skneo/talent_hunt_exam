@@ -28,7 +28,7 @@ include 'dbCon.php';
         $ret = $db->query($sql);
         $row = $ret->fetchArray(SQLITE3_ASSOC);
         unlink('images/candidates/' . $row['photo']);
-        $rol_no = $delete_application + 1000;
+        $rol_no = $delete_application + 20241000;
         $sql = <<<EOF
         DELETE from applications where exam_rol_no = '$delete_application';
         EOF;
@@ -78,7 +78,7 @@ include 'dbCon.php';
                     EOF;
                     $ret = $db->query($sql);
                     while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
-                        $exam_rol_no = 1000 + $row['exam_rol_no'];
+                        $exam_rol_no = 20241000 + $row['exam_rol_no'];
                         echo "<tr>" .
                             "<td><a href='view_admit_card.php?exam_rol_no=$exam_rol_no'>$exam_rol_no</a></td>" .
                             "<td style='position:sticky; left:0'><a href='roll_no_detail.php?exam_rol_no=$exam_rol_no'>" . $row['student_name'] . "</a></td>" .
