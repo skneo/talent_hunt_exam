@@ -44,33 +44,45 @@ if ($_POST['exam_rol_no'] >= 1000) {
     <div class='container my-3' style="min-width: 700px;">
         <div class="border px-5 pb-5">
             <div class="text-center my-5" style="font-family: 'Young Serif', serif;">
-                <h3>Talent Hunt Exam 2023</h3>
+                <h3>Talent Hunt Exam 2024</h3>
                 <h4>Kendra Mahatha Ladania</h4>
                 <h5 class="mt-3 fw-bold">Admit Card</h5>
             </div>
             <div class="row mb-5">
-                <div class="col-8">
+                <div class="col-9">
                     <p><b>Student Name:</b> <?php echo $row['student_name'] ?></p>
                     <p><b>Exam Roll Number:</b> <?php echo $exam_rol_no ?></p>
-                    <p><b>Exam Center:</b> Gayatri Mandir, Gram Mahatha
+                    <p><b>Exam Center:</b> Rajkiya Madhya Vidyalaya, Gram Mahatha
                     </p>
-                    <p><b>Exam Date:</b> 21 November, 2023</p>
+                    <p><b>Exam Date:</b> 03 November, 2024</p>
                     <p><b>Reporting Time:</b> 09:30 AM</p>
                     <p><b>Exam Time:</b> 09:45 AM</p>
                     <p><b>Identification Mark:</b> <?php echo $row['id_mark'] ?></p>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <label class='mb-2 fw-bold'>Candidate's Photo</label>
-                    <img src="images/candidates/<?php echo $row['photo'] ?>" alt="candidates photo" id='photo' width="105" height="135px" style="display: block;">
+                    <img src="images/candidates/<?php echo $row['photo'] ?>" alt="candidates photo" class='border rounded' id='photo' width="105" height="135px" style="display: block;">
                 </div>
             </div>
-            <div class="my-3">
+            <div class="mt-3">
                 <h5>Important instructions</h5>
                 <ul>
                     <li>Any type of electronic gadget like smartphone, smart watches, bluetooth devices etc. are not allowed in examination hall</li>
                     <li>Bring your admit card to examination center</li>
                     <li>Bring Aadhar Card to examination center for identification</li>
                 </ul>
+                <div class='text-muted mt-5 small'>
+                    <h5>Sponsors</h5>
+                    <ul>
+                        <li>M/s RBS & Associates Tax Consultants</li>
+                        <li>Jitendta Pustak Bhandar Ladhaniya</li>
+                        <li>Sri Card and Computer Centre Ladhaniya</li>
+                        <li>Raj Stationary Ladhaniya</li>
+                        <li>Excellent Biology Classes Darbhanga</li>
+                        <li>Raja Motor Garage Ladhaniya</li>
+                        <li>Matrixe Code Innovations ( matrixe.in ), provides affordable school software</li>
+                    </ul>
+                </div>
             </div>
         </div>
         <center class="mt-3 printbtn">
