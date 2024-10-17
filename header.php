@@ -50,7 +50,7 @@
                     </form>
                         <div class='btn-group'>
                         <button id='userMenu' type='button' class='btn btn-primary dropdown-toggle ' data-bs-toggle='dropdown' aria-expanded='false' value=''>
-                        Menu
+                        User
                         </button>
                         <ul class='dropdown-menu dropdown-menu-end'>
                         <li><a class='dropdown-item ' href='change_password.php'>Change Password</a></li>
@@ -66,9 +66,11 @@
     body {
         font-family: 'Poppins', sans-serif;
     }
+
     .dropdown:hover .dropdown-menu {
         display: block;
     }
+
     @media only screen and (min-width: 960px) {
         .navbar .navbar-nav .nav-item .nav-link {
             padding: 0 0.5em;

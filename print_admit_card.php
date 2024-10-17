@@ -42,8 +42,8 @@ if ($_POST['exam_rol_no'] >= 20241000) {
 
 <body>
     <div class='container my-3' style="min-width: 700px;">
-        <div class="border px-5 pb-5">
-            <div class="text-center my-5" style="font-family: 'Young Serif', serif;">
+        <div class="border px-5">
+            <div class="text-center mb-5 mt-3" style="font-family: 'Young Serif', serif;">
                 <h3>Talent Hunt Exam 2024</h3>
                 <h4>Kendra Mahatha Ladania</h4>
                 <h5 class="mt-3 fw-bold">Admit Card</h5>
